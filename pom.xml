@@ -9,6 +9,9 @@
         <module>silijionservicecloud-api</module>
         <module>silijionservicecloud-provider-dept-8001</module>
         <module>silijionservicecloud-consumer-dept-80</module>
+        <module>silijionservicecloud-eureka-7001</module>
+        <module>silijionservicecloud-eureka-7002</module>
+        <module>silijionservicecloud-eureka-7003</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -71,5 +74,29 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <!--status页面错误信息配置-->
+    <!--总的父工程microservicecloud修改pom.xml添加构建build信息-->
+    <build>
+        <finalName>microservicecloud</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <delimiters>
+                        <delimit>$</delimit>
+                    </delimiters>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
 
