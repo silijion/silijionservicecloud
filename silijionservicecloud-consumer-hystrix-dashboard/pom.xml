@@ -9,14 +9,13 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>silijionservicecloud-consumer-dept-80</artifactId>
-
-    <description>部门微服务消费者</description>
+    <artifactId>silijionservicecloud-consumer-hystrix-dashboard</artifactId>
 
     <dependencies>
-        <dependency><!-- 自己定义的api -->
-            <groupId>com.silijion.springcloud</groupId>
-            <artifactId>silijionservicecloud-api</artifactId>
+        <!-- 自己定义的api -->
+        <dependency>
+            <groupId>com.atguigu.springcloud</groupId>
+            <artifactId>microservicecloud-api</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
@@ -32,8 +31,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
         </dependency>
-
-        <!-- Ribbon相关 消费端集群相关的jar -->
+        <!-- Ribbon相关 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>
@@ -46,8 +44,20 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
-
-
+        <!-- feign相关 -->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-feign</artifactId>-->
+<!--        </dependency>-->
+        <!-- hystrix和 hystrix-dashboard相关 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-hystrix</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

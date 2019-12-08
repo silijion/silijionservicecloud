@@ -9,9 +9,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>silijionservicecloud-provider-dept-8001</artifactId>
+    <artifactId>silijionservicecloud-provider-dept-hystrix-8001</artifactId>
 
     <dependencies>
+
         <dependency>
             <!-- 引入自己定义的api通用包，可以使用Dept部门Entity -->
             <groupId>com.silijion.springcloud</groupId>
@@ -26,7 +27,12 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
-        <!-- actuator监控信息完善 status点击后详细信息 Hystrix Dashboard需要使用-->
+        <!--熔断-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-hystrix</artifactId>
+        </dependency>
+        <!-- actuator监控信息完善 status点击后详细信息-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
@@ -73,6 +79,5 @@
             <artifactId>spring-boot-devtools</artifactId>
         </dependency>
     </dependencies>
-
 
 </project>

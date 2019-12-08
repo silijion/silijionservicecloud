@@ -2,12 +2,12 @@ package com.silijion.springcloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 @SpringBootApplication
-@EnableEurekaClient
-public class DeptConsumer80_App {
+@EnableZuulProxy
+public class Zuul_9527_StartSpringCloudApp {
     public static void main(String[] args) {
-        SpringApplication.run(DeptConsumer80_App.class, args);
+        SpringApplication.run(Zuul_9527_StartSpringCloudApp.class,args);
     }
 }
