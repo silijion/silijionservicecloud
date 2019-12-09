@@ -14,8 +14,8 @@
     <dependencies>
         <!-- 自己定义的api -->
         <dependency>
-            <groupId>com.atguigu.springcloud</groupId>
-            <artifactId>microservicecloud-api</artifactId>
+            <groupId>com.silijion.springcloud</groupId>
+            <artifactId>silijionservicecloud-api</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
